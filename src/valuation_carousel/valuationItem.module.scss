@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+$background1: #EFEFEF;
+$background2: #E9E1EE;
+$denaurlenViolet: #4B0082;
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    height: 60vh;
+    width: 50vw;
+    background-color: $background1;
+    border-radius: 23.4px;
+    
+    img {
+        height: 50.22vh;
+        width: 17.9vw;
+        border-radius: 15px;
+        margin-left: 3vw;
+    }
+
+    .postDetails {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 50.22vh;
+        width: 23vw;
+        margin-left: 4.56vw;
+        padding-top: 15px;
+    }
+}
+
+.profileWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5vh;
+
+    img {
+        width: 56px;
+        height: 56px;
+        margin: 0;
+    }
+
+    div {
+        margin-left: 15px;
+        h1 {
+            color: black;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.17vw;
+            margin: 0;
+        }
+        p {
+            color: #A9A9A9;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.04vw;
+            margin: 0;
+        }
+    }
+}
+
+.attributes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 0.6vh;
+    text-overflow: ellipsis;
+    
+    div {
+        width: 46%;
+        p {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: calc(0.5vw + 0.8vh);
+            color: #A9A9A9;
+        }
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 17px;
+            width: 19px;
+            margin: 0;
+        }
+
+        p {
+            color: #343434;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.04vw;
+            margin-left: 7px;
+        }
+    }
+}
+
+.timer {
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.09vw;
+        margin: 0;
+        background-color: #DEDEDE;
+        align-items: center;
+        padding: 4px;
+        margin-right: 4px;
+    }
+}
+
+
+
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: $background2;
+    width: 19.6vw;
+    height: 60vh;
+    border-radius: 23.4px;
+    margin-left: 2.73vw;
+
+    h1 {
+        color: black;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.20vw;
+        margin: 0 1vw;
+        margin-top: 6vh;
+    }
+
+    img {
+        margin-top: 4vh;
+        width: 8.73vw;
+        height: 16.08vh;
+    }
+
+    p {
+        color: black;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.20vw;
+        margin-top: 7vh;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.02vw;
+        width: 100%;
+
+        .follow_btn {
+            width: 4.88vw;
+            height: 5.27vh;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1vw;
+            background-color: $denaurlenViolet;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+    
+        .message_btn {
+            width: 6.14vw;
+            height: 5.27vh;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1vw;
+            color: $denaurlenViolet;
+            border-radius: 5px;
+            border: 1px solid $denaurlenViolet;
+            padding: 0 0;
+        }
+    }
+    
+}
+
+// TABLET MODE ==========================================================>
+@media only screen and (max-width: 945px) {
+    .profileWrapper {
+        margin-bottom: 4vh;
+    
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    
+        div {
+            margin-left: 9px;
+            h1 {
+                font-size: 2vw;
+            }
+            p {
+                font-size: 1.5vw;
+            }
+        }
+    }
+    .attributes {
+        margin-bottom: 2.4vh;
+        div {
+            width: 46%;
+            p {
+                font-size: 1.8vw;
+            }
+        }
+    
+        span {
+            font-size: 17px;
+            img {
+                height: 17px;
+                width: 19px;
+            }
+    
+            p {
+                font-size: 1.9vw;
+                margin-left: 3px;
+            }
+        }
+    }
+    .timer {
+        p {
+            padding: 3px;
+            margin-right: 3px;
+        }
+    }
+    .right {
+        width: 19.6vw;
+        height: 60vh;
+        border-radius: 23.4px;
+    
+        h1 {
+            font-size: 1.6vw;
+        }
+    
+        img {
+            margin-top: 4vh;
+            width: 14.73vw;
+            height: 16.08vh;
+        }
+    
+        p {
+            font-size: 2.4vw;
+            margin-top: 5vh;
+        }
+    
+        div {
+            gap: 10px;
+            margin-top: 2vh;
+            flex-direction: column;
+            .follow_btn {
+                width: 15.88vw;
+                height: 3.27vh;
+                font-size: 2vw;
+            }
+        
+            .message_btn {
+                width: 15.88vw;
+                height: 3.27vh;
+                font-size: 2vw;
+            }
+        }
+    }   
+}
+
+// MOBILE MODE =============================================================>
+
+@media only screen and (max-width: 430px) {
+    .profileWrapper {
+        margin-bottom: 4vh;
+    
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    
+        div {
+            margin-left: 7px;
+            h1 {
+                font-size: 1.6vw;
+            }
+            p {
+                font-size: 1.2vw;
+            }
+        }
+    }
+    .attributes {
+        margin-bottom: 2.4vh;
+        div {
+            width: 46%;
+            p {
+                font-size: 1.8vw;
+            }
+        }
+    
+        span {
+            font-size: 13px;
+            img {
+                height: 13px;
+                width: 15px;
+            }
+    
+            p {
+                font-size: 1.6vw;
+                margin-left: 3px;
+            }
+        }
+    }
+    .timer {
+        p {
+            padding: 1px;
+            margin-right: 3px;
+        }
+    }
+    .right {
+        width: 19.6vw;
+        height: 60vh;
+        border-radius: 23.4px;
+    
+        h1 {
+            font-size: 1.6vw;
+        }
+    
+        img {
+            margin-top: 4vh;
+            width: 14.73vw;
+            height: 16.08vh;
+        }
+    
+        p {
+            font-size: 2vw;
+            margin-top: 7vh;
+        }
+    
+        div {
+            gap: 10px;
+            margin-top: 2vh;
+            flex-direction: column;
+            .follow_btn {
+                width: 13.88vw;
+                height: 3.27vh;
+                font-size: 2vw;
+            }
+        
+            .message_btn {
+                width: 13.88vw;
+                height: 3.27vh;
+                font-size: 2vw;
+            }
+        }
+    }   
+}

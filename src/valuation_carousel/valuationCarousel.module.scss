@@ -1,0 +1,33 @@
+.valuationCarousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.valuationCarouselItem {
+    min-width: 100%;
+    height: fit-content;
+    transition: all 0.8s;
+}
+
+%btn-slider {
+    position: absolute;
+    height: 60vh;
+    width: 9vw;
+    top: 50;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.leftSlider {
+    left: 0;
+    @extend %btn-slider
+}
+
+.rightSlider {
+    right: 0;
+    @extend %btn-slider
+}
