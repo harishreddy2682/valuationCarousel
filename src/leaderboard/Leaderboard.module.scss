@@ -1,0 +1,878 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$backgroundGrey: #e5e5e5;
+$textBlack: #07000c;
+$btnInactive: #ececec;
+$btnBorder: #e2e2e2;
+
+@media only screen and (min-width: 945px) {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    width: auto;
+    background-color: $backgroundGrey;
+    padding: 3vw;
+  }
+
+  .mobileHeader {
+    display: none;
+  }
+
+  .filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.9vw;
+      color: $textBlack;
+      margin-right: 2vw;
+      margin-left: 3vw;
+    }
+
+    button {
+      height: 5.24vh;
+      width: 7.36vw;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.9vw;
+      background-color: $btnInactive;
+      border: none;
+      cursor: pointer;
+      border: 1px solid $btnBorder;
+      &:active {
+        background-color: white;
+      }
+    }
+
+    #globalBtn {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border: 1px solid $btnBorder;
+      border-right: none;
+    }
+
+    #countryBtn {
+      border-left: none;
+      border-right: none;
+    }
+
+    #friendsBtn {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-left: none;
+    }
+
+    .btnActive {
+      background-color: white;
+    }
+
+    select {
+      height: 5.24vh;
+      width: 13.54vw;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.9vw;
+      background-color: $btnInactive;
+      padding: 10px;
+      margin-left: 2vw;
+      border: 1px solid $btnBorder;
+      border-radius: 5px;
+
+      &:focus-visible {
+        outline-width: 0;
+      }
+    }
+
+    .search {
+      height: fit-content;
+      position: relative;
+      margin-left: auto;
+      margin-right: 8vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        transform: translateX(160%);
+      }
+
+      input {
+        height: 5.43vh;
+        width: 13.67vw;
+        border: 1px solid $btnBorder;
+        background-color: $btnInactive;
+        border-radius: 5px;
+        padding-left: 40px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+
+        &::placeholder {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          padding-left: 0px;
+        }
+
+        &:focus-visible {
+          outline-width: 0;
+        }
+      }
+    }
+  }
+
+  .top3_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    gap: 10vw;
+    margin-top: 4vh;
+
+    #top_1 {
+      align-self: flex-start;
+    }
+
+    #top_2,
+    #top_3 {
+      margin-top: 6vh;
+    }
+
+    .top3_wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: fit-content;
+      margin-right: 2vw;
+
+      .crown {
+        height: auto;
+        width: 6.77vw;
+        margin: 0;
+        padding: 0;
+      }
+
+      .avatarWrapper {
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+        .userImg {
+          height: 20.94vh;
+          width: 10.42vw;
+        }
+        .userCountry {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: translateY(-10%) translateX(-10%);
+        }
+      }
+
+      h1 {
+        width: 100%;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 1vh;
+      }
+
+      span {
+        width: 100%;
+        margin-top: 2vh;
+        img {
+          height: 27px;
+          width: 27px;
+          margin-right: 7px;
+        }
+        display: flex;
+        align-items: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .topUsersContainer {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 11vh;
+
+    .userWrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: white;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      padding: 2vw;
+      height: 4.47vh;
+      width: 80%;
+      border: 1px solid $btnBorder;
+      margin-top: 3vh;
+
+      .userCountry {
+        height: 27px;
+        width: 40px;
+        margin-left: 8vw;
+      }
+
+      .userCountryPhone {
+        display: none;
+      }
+
+      .userAvatar {
+        height: 48px;
+        width: 48px;
+        margin-left: 12vw;
+      }
+
+      .nameWrapper {
+        margin-left: 1vw;
+        .userUsername {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+        }
+        .userName {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          color: #b9b9b9;
+        }
+        span {
+          display: none;
+        }
+      }
+
+      .coin {
+        margin-left: 11vw;
+        margin-right: 0.5vw;
+      }
+
+      .growthIndicator {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+// TABLET MODE ==========================================================>
+@media only screen and (min-width: 482px) and (max-width: 944px) {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    width: auto;
+    background-color: $backgroundGrey;
+    padding: 3vw;
+  }
+
+  .mobileHeader {
+    display: none;
+  }
+
+  .filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.7vw;
+      color: $textBlack;
+      margin-right: 2vw;
+      margin-left: 3vw;
+    }
+
+    button {
+      height: 5.24vh;
+      width: 7.36vw;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.4vw;
+      background-color: $btnInactive;
+      border: none;
+      cursor: pointer;
+      border: 1px solid $btnBorder;
+      &:active {
+        background-color: white;
+      }
+    }
+
+    #globalBtn {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border: 1px solid $btnBorder;
+      border-right: none;
+    }
+
+    #countryBtn {
+      border-left: none;
+      border-right: none;
+    }
+
+    #friendsBtn {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-left: none;
+    }
+
+    .btnActive {
+      background-color: white;
+    }
+
+    select {
+      height: 5.24vh;
+      width: 13.54vw;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.4vw;
+      background-color: $btnInactive;
+      padding: 10px;
+      margin-left: 2vw;
+      border: 1px solid $btnBorder;
+      border-radius: 5px;
+
+      &:focus-visible {
+        outline-width: 0;
+      }
+    }
+
+    .search {
+      height: fit-content;
+      position: relative;
+      margin-left: auto;
+      margin-right: 8vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        transform: translateX(160%);
+      }
+
+      input {
+        height: 5.43vh;
+        width: 13.67vw;
+        border: 1px solid $btnBorder;
+        background-color: $btnInactive;
+        border-radius: 5px;
+        padding-left: 40px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+
+        &::placeholder {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          padding-left: 0px;
+        }
+
+        &:focus-visible {
+          outline-width: 0;
+        }
+      }
+    }
+  }
+
+  .top3_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    gap: 10vw;
+    margin-top: 4vh;
+
+    #top_1 {
+      align-self: flex-start;
+    }
+
+    #top_2,
+    #top_3 {
+      margin-top: 6vh;
+    }
+
+    .top3_wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: fit-content;
+      margin-right: 2vw;
+
+      .crown {
+        height: auto;
+        width: 6.77vw;
+        margin: 0;
+        padding: 0;
+      }
+
+      .avatarWrapper {
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+        .userImg {
+          height: 11.94vh;
+          width: 14.42vw;
+        }
+        .userCountry {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: translateY(-10%) translateX(-10%);
+        }
+      }
+
+      h1 {
+        width: 100%;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 1vh;
+      }
+
+      span {
+        width: 100%;
+        margin-top: 2vh;
+        img {
+          height: 27px;
+          width: 27px;
+          margin-right: 7px;
+        }
+        display: flex;
+        align-items: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .topUsersContainer {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8vh;
+
+    .userWrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: white;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      padding: 2vw;
+      height: 4.47vh;
+      width: 90%;
+      border: 1px solid $btnBorder;
+      margin-top: 3vh;
+
+      .userCountry {
+        height: 27px;
+        width: 40px;
+        margin-left: 8vw;
+      }
+
+      .userCountryPhone {
+        display: none;
+      }
+
+      .userAvatar {
+        height: 48px;
+        width: 48px;
+        margin-left: 12vw;
+      }
+
+      .nameWrapper {
+        margin-left: 1vw;
+        .userUsername {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+        }
+        .userName {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          color: #b9b9b9;
+        }
+        span {
+          display: none;
+        }
+      }
+
+      .coin {
+        margin-left: 11vw;
+        margin-right: 0.5vw;
+      }
+
+      .growthIndicator {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+// MOBILE MODE ==========================================================>
+@media only screen and (min-width: 0px) and (max-width: 482px) {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    background-color: $backgroundGrey;
+    min-height: 100vh;
+  }
+
+  .mobileHeader {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-left: 4vw;
+    }
+
+    h1 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 4vw;
+      margin-left: 30vw;
+    }
+
+    .searchMobile {
+      height: fit-content;
+      position: relative;
+      margin-left: auto;
+      margin-right: 4vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        transform: translateX(160%);
+      }
+
+      input {
+        height: 3.43vh;
+        width: 13.67vw;
+        border: 1px solid $btnBorder;
+        background-color: $btnInactive;
+        border-radius: 5px;
+        padding-left: 40px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+
+        &::placeholder {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10px;
+          padding-left: 0px;
+        }
+
+        &:focus-visible {
+          outline-width: 0;
+        }
+      }
+    }
+  }
+
+  .filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+
+    p {
+      display: none;
+    }
+
+    button {
+      height: 5.24vh;
+      width: 100vw;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 3vw;
+      background-color: $btnInactive;
+      border: none;
+      cursor: pointer;
+      border: 1px solid $btnBorder;
+      &:active {
+        background-color: white;
+      }
+    }
+
+    #globalBtn {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border: 1px solid $btnBorder;
+      border-right: none;
+    }
+
+    #countryBtn {
+      border-left: none;
+      border-right: none;
+    }
+
+    #friendsBtn {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-left: none;
+    }
+
+    .btnActive {
+      background-color: white;
+    }
+
+    select {
+      display: none;
+    }
+
+    .search {
+      display: none;
+    }
+  }
+
+  .top3_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    gap: 5vw;
+    margin-top: 4vh;
+
+    #top_1 {
+      align-self: flex-start;
+    }
+
+    #top_2,
+    #top_3 {
+      margin-top: 6vh;
+    }
+
+    .top3_wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: fit-content;
+      margin-right: 1vw;
+
+      .crown {
+        height: auto;
+        width: 10.77vw;
+        margin: 0;
+        padding: 0;
+      }
+
+      .avatarWrapper {
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+        .userImg {
+          height: auto;
+          width: 19.42vw;
+        }
+        .userCountry {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: translateY(-10%) translateX(-10%);
+          height: 30px;
+        }
+      }
+
+      h1 {
+        width: 100%;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 1vh;
+      }
+
+      span {
+        width: 100%;
+        margin-top: 2vh;
+        img {
+          height: 20px;
+          width: 20px;
+          margin-right: 7px;
+        }
+        display: flex;
+        align-items: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .topUsersContainer {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 6vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+    .userWrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: white;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      padding: 2vw;
+      height: 4.47vh;
+      width: 90%;
+      border: 1px solid $btnBorder;
+      margin-top: 3vh;
+      padding-left: 4vw;
+
+      .userCountry {
+        display: none;
+      }
+
+      .userCountryPhone {
+        display: block;
+        height: 17px;
+        width: 17px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      .userAvatar {
+        height: 38px;
+        width: 38px;
+        margin-left: 12vw;
+      }
+
+      .nameWrapper {
+        margin-left: 3vw;
+        .userUsername {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+        }
+        .userName {
+          display: none;
+        }
+        span {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          img {
+            height: 16px;
+            width: 16px;
+            margin: 0;
+          }
+          p {
+            font-size: 14px;
+            color: #b9b9b9;
+          }
+        }
+      }
+
+      .coin {
+        display: none;
+      }
+      .userWalletCoins {
+        display: none;
+      }
+
+      .growthIndicator {
+        margin-left: auto;
+        margin-right: 3vw;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5vw;
+        }
+      }
+    }
+  }
+}
